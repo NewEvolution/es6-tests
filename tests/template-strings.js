@@ -26,9 +26,9 @@ describe("Template strings", function() {
 
   it("Can evaluate expressions", function() {
     var string = `3 * 7 = ${3*7}`;
+    expect(string).to.equal("3 * 7 = 21");
   });
 
-    expect(string).to.equal("3 * 7 = 21");
   it("Can be multi-line", function() {
     var string = `Line one,
 Line two`;
