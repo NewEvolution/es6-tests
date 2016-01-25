@@ -5,3 +5,10 @@ describe("Test suite verification", function() {
     expect(true).to.be.true;
   });
 });
+
+describe("Template strings", function() {
+  it("Should be a string", function() {
+    var string = `abc`;
+    expect(string).to.be.a.("string");
+  });
+});
