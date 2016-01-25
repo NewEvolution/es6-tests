@@ -14,4 +14,16 @@ describe("Arrow function", function() {
     }
     expect(fn("Ryan")).to.equal("Hello Ryan");
   });
+
+  it("Binds \"this\" to the function", function() {
+    this.foo = "Bar"
+    var oldFn = function() {
+      return this.foo;
+    };
+    var newFn = () => {
+      return this.foo;
+    }
+    expect(oldFn()).to.equal(undefined);
+    expect(newFn()).to.equal("Bar");
+  });
 });
