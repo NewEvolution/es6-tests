@@ -1,7 +1,7 @@
-"use strict";
 var expect = require("chai").expect;
 
 describe("Let", function() {
+  "use strict";
   it("Is the new \"var\"", function() {
     let foo = "bar";
     expect(foo).to.equal("bar");
