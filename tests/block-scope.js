@@ -17,6 +17,7 @@ describe("Let", function() {
     let foo = "bar";
     if(true) {
       let foo = "baz";
+      expect(foo).to.equal("baz");
     }
     expect(foo).to.equal("bar");
   });
