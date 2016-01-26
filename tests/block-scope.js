@@ -12,4 +12,12 @@ describe("Let", function() {
     foo = "baz"
     expect(foo).to.equal("baz");
   });
+
+  it("Restricts scope to the block", function() {
+    let foo = "bar";
+    if(true) {
+      let foo = "baz";
+    }
+    expect(foo).to.equal("bar");
+  });
 });
